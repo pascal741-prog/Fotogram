@@ -1,10 +1,47 @@
 * {
     margin: 0; 
-    padding: 6;
+    padding: 0;
     scroll-behavior: smooth; 
     box-sizing: border-box; 
     position: relative; 
     text-decoration: none; 
     list-style: none;
+    background-color: rgb(6, 23, 30);
 }
 
+@font-face {
+    font-family: "Raleway";
+    src: url('./') format("ttf");
+    font-style: normal;
+}
+
+h1 {
+    color: white;
+    font-family: 'Figtree', sans-serif;
+
+}
+header {
+    width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+main {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+    .main-content{
+        max-width: 1440px;
+    }
+    #content{
+        
+        img{
+            width: 150px;
+            aspect-ratio: 1 / 1;
+            min-width: 120px;
+        }
+    }
+}
