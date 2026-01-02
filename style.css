@@ -23,16 +23,18 @@ h1 {
 
 }
 
-header, footer {
-    background-color: rgb(9, 33, 42);
-    width: 100%;
-}
 
 img{
     width: 150px;
     aspect-ratio: 1 / 1;
-    border: 1px solid rgb(9, 33, 42);
+    border: 2px solid #124658;
     border-radius: 16px;
+    background-color: transparent;
+}
+
+span {
+    background-color: transparent;
+    color: rgb(98, 123, 132);
 }
 
 
@@ -44,8 +46,10 @@ header {
     padding: 20px 140px;
     font-weight: bold;
     gap: 1rem;
+    background-color: rgb(9, 33, 42);
 
     span{
+        color: white;
         font-size: 36px;
         background-color: rgb(9, 33, 42);
     }
@@ -79,5 +83,24 @@ main {
         display: flex;
         justify-content: center;
         gap: 24px;
+    }
+}
+
+/* ! FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    height: 128px;
+    background-color: rgb(9, 33, 42);
+
+    img {
+        height: 32px;
+        max-width: 132px;
+        border: none;
+        border-radius: 0px;
     }
 }
