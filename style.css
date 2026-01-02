@@ -1,0 +1,10 @@
+* {
+    margin: 0; 
+    padding: 6;
+    scroll-behavior: smooth; 
+    box-sizing: border-box; 
+    position: relative; 
+    text-decoration: none; 
+    list-style: none;
+}
+
