@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./">
+    <link rel="shortcut icon" href="./img/Logo.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -17,23 +17,33 @@
         <div class="main-content">
             <H1>Your personal photo album</H1>
             <div id="content">
-                <a href=""><img src="./img/frozen lake.jpg" alt="Alaska"></a>
-                <img src="./img/city-at-night.jpg" alt="City-at-Night">
-                <img src="./img/clouds.png" alt="Clouds">
-                <img src="./img/bird.jpg" alt="Bird">
-                <img src="./img/hurrican.jpg" alt="Hurrican">
-                <img src="./img/snow-mountain.jpg" alt="Mountains">
-                <img src="./img/duck.jpg" alt="Duck">
-            
-                <img src="./img/nightsky.jpg" alt="Nightsky">
-                <img src="./img/bird2.jpg" alt="Bird">
-                <img src="./img/leopards.jpg" alt="Leopard">
-                <img src="./img/winter-mountain.jpg" alt="Mountains">
-                <img src="./img/winter-tree.jpg" alt="Winter-Tree">
+                <img onclick="openOverlay(0)" tabindex="0" src="./img/frozen lake.jpg" alt="Alaska">
+                <img onclick="openOverlay(1)" tabindex="0" src="./img/city-at-night.jpg" alt="City-at-Night">
+                <img onclick="openOverlay(2)" tabindex="0" src="./img/clouds.png" alt="Clouds">
+                <img onclick="openOverlay(3)" tabindex="0" src="./img/bird.jpg" alt="Bird">
+                <img onclick="openOverlay(4)" tabindex="0" src="./img/hurrican.jpg" alt="Hurrican">
+                <img onclick="openOverlay(5)" tabindex="0" src="./img/snow-mountain.jpg" alt="Mountains">
+                <img onclick="openOverlay(6)" tabindex="0" src="./img/duck.jpg" alt="Duck">
+                <img onclick="openOverlay(7)" tabindex="0" src="./img/nightsky.jpg" alt="Nightsky">
+                <img onclick="openOverlay(8)" tabindex="0" src="./img/bird2.jpg" alt="Bird">
+                <img onclick="openOverlay(9)" tabindex="0" src="./img/leopards.jpg" alt="Leopard">
+                <img onclick="openOverlay(10)" tabindex="0" src="./img/winter-mountain.jpg" alt="Mountains">
+                <img onclick="openOverlay(11)" tabindex="0" src="./img/winter-tree.jpg" alt="Winter-Tree">
             </div>
             
         </div>
     </main>
+
+    <dialog id="overlay">
+        <header>
+            <button onclick="closeOverlay()">X</button>
+        </header>
+        <main>
+            <img id="currentPicture" src="" alt="">
+        </main>
+        <footer></footer>
+    </dialog>
+
 
     <footer>
         <img src="./img/DA-Logo.png" alt="Dev-Akademie">

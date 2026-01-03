@@ -1,80 +1,80 @@
-/* ? GENERAL */ 
+/* ? GENERAL */
 * {
-    margin: 0; 
-    padding: 0;
-    scroll-behavior: smooth; 
-    box-sizing: border-box; 
-    position: relative; 
-    text-decoration: none; 
-    list-style: none;
-    background-color: rgb(6, 23, 30);
-    color: white;
-    font-family: "Figtree", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  position: relative;
+  text-decoration: none;
+  list-style: none;
+  background-color: rgb(6, 23, 30);
+  color: white;
+  font-family: "Figtree", sans-serif;
 }
 
 @font-face {
-    font-family: "Figtree";
-    src: url('./Figtree/Figtree-VariableFont_wght.ttf') format("ttf");
+  font-family: "Figtree";
+  src: url("./Figtree/Figtree-VariableFont_wght.ttf") format("ttf");
 }
 
 h1 {
-    font-size: clamp(48px, 3.5em, 56px);
-    padding-bottom: 10vw;
-
+  font-size: clamp(48px, 3.5em, 56px);
+  padding-bottom: 10vw;
 }
 
 span {
-    background-color: transparent;
-    color: rgb(98, 123, 132);
+  background-color: transparent;
+  color: rgb(98, 123, 132);
 }
-
 
 /* ! HEADER */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px 140px;
-    font-weight: bold;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 140px;
+  font-weight: bold;
+  gap: 1rem;
+  background-color: rgb(9, 33, 42);
+
+  span {
+    color: white;
+    font-size: 36px;
     background-color: rgb(9, 33, 42);
+  }
 
-    span{
-        color: white;
-        font-size: 36px;
-        background-color: rgb(9, 33, 42);
-    }
-
-    img{
-        max-width: 40px;
-        background-color: transparent;
-        border: none;
-        border-radius: 0;        
-        /*max-height: 38px;
+  img {
+    max-width: 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    /*max-height: 38px;
         max-width: 40px;*/
-    }
+  }
 }
-
 
 /* ! MAIN */
 main {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* flex: 1;        */
+  /* ? Veränderung */
 
-    img{
-        max-width: 150px;
-        aspect-ratio: 1 / 1;
-        border: 2px solid #124658;
-        border-radius: 16px;
-        background-color: transparent;
-    }
-    .main-content{
-        padding: 10% 5% 15% 5%;
-    }
-    /*#contentTop{
+  img {
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid #124658;
+    border-radius: 16px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .main-content {
+    padding: 10% 5% 15% 5%;
+  }
+  /*#contentTop{
         display: flex;  
         gap: clamp(10px, 2vw, 24px);
         padding-bottom: 3vw;
@@ -88,7 +88,7 @@ main {
         gap: 24px;
     }*/
 
-    /*#contentTop, #contentBottom {
+  /*#contentTop, #contentBottom {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -99,36 +99,66 @@ main {
         padding-bottom: 7dvh;
     }*/
 }
-main a:hover{
-
-}
+/* main a:hover {
+} */
 
 /* ! FOOTER */
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    height: 128px;
-    background-color: rgb(9, 33, 42);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  height: 128px;
+  background-color: rgb(9, 33, 42);
+  border-radius: 15% 15% 0 0;
 
-    img {
-        height: 32px;
-        max-width: 132px;
-        border: none;
-        border-radius: 0px;
+  img {
+    height: 32px;
+    max-width: 132px;
+    border: none;
+    border-radius: 0px;
+  }
+}
+
+/* DIALOG */
+
+dialog {
+    margin: auto;
+    border-radius: 40px;
+    width: 500px;
+    border: none;
+    
+    header{
+        display: flex;
     }
+
+    main {
+        flex: 1;
+        height: fit-content;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            font-size: 56px;
+        }
+  } 
+
+  footer {
+    height: 80px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 320px) {
-    header{
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-    }
-    main img{
-        width: clamp(132px, 44vw, 150px)
-    }
+  header {
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  main img {
+    width: clamp(132px, 44vw, 150px);
+  }
 }
