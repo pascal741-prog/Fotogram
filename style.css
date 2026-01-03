@@ -18,7 +18,7 @@
 }
 
 h1 {
-    font-size: clamp(48px, 2em, 56px);
+    font-size: clamp(48px, 3.5em, 56px);
     padding-bottom: 10vw;
 
 }
@@ -122,8 +122,13 @@ footer {
     }
 }
 
-@media (max-width: 1250px) {
-    main {
-        display: grid;
+@media (min-width: 320px) {
+    header{
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    main img{
+        width: clamp(132px, 44vw, 150px)
     }
 }
