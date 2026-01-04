@@ -18,7 +18,7 @@
 }
 
 h1 {
-  font-size: clamp(48px, 3.5em, 56px);
+  font-size: clamp(48px, 15dvw, 56px);
   padding-bottom: 10vw;
 }
 
@@ -60,47 +60,36 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* flex: 1;        */
-  /* ? Veränderung */
-
-  img {
-    max-width: 150px;
-    aspect-ratio: 1 / 1;
-    border: 2px solid #124658;
-    border-radius: 16px;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .main-content {
-    padding: 10% 5% 15% 5%;
-  }
-  /*#contentTop{
-        display: flex;  
-        gap: clamp(10px, 2vw, 24px);
-        padding-bottom: 3vw;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #contentBottom{
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-    }*/
-
-  /*#contentTop, #contentBottom {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: clamp(1dvw, 2vw, 24px);
-    }
-    #contentTop {
-        padding-bottom: 7dvh;
-    }*/
 }
-/* main a:hover {
-} */
+
+.main-content {
+    padding: 10% 5% 15% 5%;
+    display: flex;
+    flex-direction: column;
+
+    #content{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+    #content img {
+      max-width: 150px;
+      aspect-ratio: 1 / 1;
+      border: 2px solid #124658;
+      border-radius: 16px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    #content img:hover {
+      border: 2px solid rgb(255, 108, 50);
+
+    }
+}
+
+
+
 
 
 /* ! FOOTER */
@@ -123,43 +112,136 @@ footer {
   }
 }
 
-/* DIALOG */
+/* ! DIALOG */
 
 dialog {
-    margin: auto;
-    border-radius: 40px;
-    width: 500px;
-    border: none;
-    
+  border: none;
+  border-radius: 50px;
+  border: 2px solid white ;
+  padding: 20px;
+  background-color: rgb(9, 33, 42);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+
     header{
-        display: flex;
+      display: flex;
+      background-color: transparent;
+      justify-content: space-between;
+      margin-bottom: 5%;
+    }
+
+    #closeOverlay{
+        border: none;
+        height: 40px;
+        width: 40px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        font-size: 24px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    #closeOverlay:hover{
+      background-color:dodgerblue;
+      color: black;
     }
 
     main {
-        flex: 1;
-        height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      background-color: transparent;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        p {
-            font-size: 56px;
-        }
-  } 
+      #currentPicture{
+        aspect-ratio: 1.5 / 1;
+        width: clamp(192px, 35dvw ,1920px); /*1920 x 1080*/
+        border: 1px solid transparent;
+        border-radius: 20px;
+      }
+    } 
 
-  footer {
-    height: 80px;
-    width: 100%;
+    footer {
+      display: flex;
+      background-color: transparent;
+      align-items: center;
+      justify-content: center;
+    
+    #favIcon{
+      height: 18px;
+      width: 21px;
+    }
+    p{
+      margin-top: 40px;
+    }
+    .overlayNavigation{
+      width: 261px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25%;
+      background-color: transparent;
+      
+      
+      button{
+        border-radius: 25px;
+        padding: 3%;
+        background-color: rgb(50, 85, 107, 30%);
+      }
+      button:hover{
+        background-color:dodgerblue;
+      }
+    }
+    .overlayNavigation img {
+      background-color: transparent;
+      height: 18px;
+      width: 21px;
+
+      
+    }
   }
 }
 
-@media (min-width: 320px) {
+dialog::backdrop {
+  background: rgba(20, 20, 20, 0.35);
+  backdrop-filter: blur(5px) saturate(120%);
+}
+
+@media (min-width: 320px) and (max-width: 515px) {
+
   header {
     align-items: center;
     justify-content: center;
     padding: 20px;
   }
-  main img {
-    width: clamp(132px, 44vw, 150px);
+  .main-content {
+    #content {
+      gap: 10px;
+    }
   }
+  main img {
+    width: clamp(80px, 40dvw, 150px);
+  }
+
+  dialog{
+
+  }
+
+
 }
+
+/* @media (min-width: 320px) and (max-width: 1000px) {
+  dialog{
+    main {
+
+        #currentPicture{
+          aspect-ratio: 1 / 2;
+          max-width: 320px;
+          border: 1px solid transparent;
+          border-radius: 20px;
+        }
+    } 
+  }
+} */
