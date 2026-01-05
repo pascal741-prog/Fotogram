@@ -1,3 +1,5 @@
+// #region global variablen 
+
 const OverlayRef = document.getElementById("overlay");
 
 const imgFiles = [
@@ -17,8 +19,11 @@ const imgFiles = [
 
 let currentIndex = 0;
 
-// open dialog
+// #endregion global variablen
 
+// #region overlay 
+
+// #region open dialog
 function openOverlay(index) {
   const OverlayRef = document.getElementById("overlay");
 
@@ -29,8 +34,8 @@ function openOverlay(index) {
   countCurrentPicture();
   showDescription();
 }
-
-// close Dialog
+// #endregion open dialog
+// #region close-Dialog
 function closeOverlay() {
   const OverlayRef = document.getElementById("overlay");
 
@@ -40,25 +45,22 @@ function closeOverlay() {
 function counter() {
   console.log(currentIndex);
 }
-
-// open selected Photo
-
+// #endregion close-Dialog
+// #region open selected Photo
 function OpenCurrentPicture() {
   const openPicture = document.getElementById("currentPicture");
   openPicture.src = imgFiles[currentIndex];
   openPicture.alt = document.querySelectorAll("#content img")[currentIndex].alt;
 }
-
-
-// Picture Counter
+// #endregion open selected Photo
+// #region picture counter
 
 function countCurrentPicture() {
   const counter = document.getElementById("counter");
   counter.textContent = `${currentIndex + 1} / ${imgFiles.length}`;
 }
-
-// switch picture left
-
+// #endregion picture counter 
+// #region switch picture left
 function switchSelectedPhotoLeft() {
   if (currentIndex > 0) {
     currentIndex--;
@@ -70,9 +72,8 @@ function switchSelectedPhotoLeft() {
   countCurrentPicture();
   showDescription();
 }
-
-// switch picture right 
-
+//#endregion switch picture left 
+// #region switch picture right 
 function switchSelectedPhotoRight() {
   if (currentIndex < imgFiles.length - 1) {
     currentIndex++;
@@ -83,9 +84,8 @@ function switchSelectedPhotoRight() {
   countCurrentPicture();
   showDescription();
 }
-
-// show img description
-
+// #endregion switch picture right
+// #region show img description
 const thumbnails = document.querySelectorAll("#content img");
 
 function showDescription() {
@@ -93,10 +93,8 @@ function showDescription() {
   const titleRef = document.getElementById("imgTitle");
   titleRef.textContent = openPicture.alt;
 }
-
-
-// randomize Photos
-
+// #endregion show img description
+// #region randomizer
 function randomizePhotos() {
   let randomIndex;
 
@@ -110,3 +108,6 @@ function randomizePhotos() {
   countCurrentPicture();
   showDescription();
 }
+// #endregion randomizer
+
+// #endregion Overlay
