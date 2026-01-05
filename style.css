@@ -104,12 +104,17 @@ footer {
   gap: 1.2rem;
   background-color: rgb(9, 33, 42);
   border-radius: 15% 15% 0 0;
+  padding: 20px 0;
+  
 
   img {
     height: 32px;
     max-width: 132px;
     border: none;
     border-radius: 0px;
+  }
+  #footerLogo{
+    background-color: transparent;
   }
 }
 
