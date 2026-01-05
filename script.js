@@ -16,7 +16,6 @@ const imgFiles = [
 ];
 
 let currentIndex = 0;
-let totalPictures = 12;
 
 // open dialog
 
@@ -28,6 +27,7 @@ function openOverlay(index) {
   counter();
   OpenCurrentPicture();
   countCurrentPicture();
+  showDescription();
 }
 
 // close Dialog
@@ -45,9 +45,10 @@ function counter() {
 
 function OpenCurrentPicture() {
   const openPicture = document.getElementById("currentPicture");
-
   openPicture.src = imgFiles[currentIndex];
+  openPicture.alt = document.querySelectorAll("#content img")[currentIndex].alt;
 }
+
 
 // Picture Counter
 
@@ -67,6 +68,7 @@ function switchSelectedPhotoLeft() {
   }
   OpenCurrentPicture();
   countCurrentPicture();
+  showDescription();
 }
 
 // switch picture right 
@@ -79,17 +81,31 @@ function switchSelectedPhotoRight() {
   }
   OpenCurrentPicture();
   countCurrentPicture();
+  showDescription();
 }
 
 // show img description
 
+const thumbnails = document.querySelectorAll("#content img");
+
 function showDescription() {
-  if (currentIndex > 0) {
-    currentIndex--;
-  }
-  else{
-    currentIndex = imgFiles.length -1;
-  }
+  const openPicture = document.getElementById("currentPicture");
+  const titleRef = document.getElementById("imgTitle");
+  titleRef.textContent = openPicture.alt;
+}
+
+
+// randomize Photos
+
+function randomizePhotos() {
+  let randomIndex;
+
+  do {
+    randomIndex = Math.floor(Math.random() * imgFiles.length);
+  } while (randomIndex === currentIndex);
+
+  currentIndex = randomIndex;
+
   OpenCurrentPicture();
   countCurrentPicture();
   showDescription();

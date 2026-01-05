@@ -101,9 +101,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1.2rem;
-  height: 128px;
   background-color: rgb(9, 33, 42);
   border-radius: 15% 15% 0 0;
 
@@ -126,25 +124,27 @@ dialog {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  
 
     header{
       display: flex;
       background-color: transparent;
       justify-content: space-between;
       margin-bottom: 5%;
+      padding: 20px 0;
     }
 
     #closeOverlay{
         border: none;
-        height: 40px;
-        width: 40px;
+        height: 32px;
+        width: 32px;
         border: 1px solid transparent;
         border-radius: 50%;
         font-size: 24px;
         position: absolute;
         right: 0;
         top: 0;
+        background-color: transparent;
+        font-size: 18px;
     }
     #closeOverlay:hover{
       background-color:dodgerblue;
@@ -159,7 +159,7 @@ dialog {
 
       #currentPicture{
         aspect-ratio: 1.5 / 1;
-        width: clamp(192px, 35dvw ,1920px); /*1920 x 1080*/
+        width: clamp(280px, 35dvw ,1920px); /*1920 x 1080*/
         border: 1px solid transparent;
         border-radius: 20px;
       }
@@ -187,14 +187,30 @@ dialog {
       gap: 25%;
       background-color: transparent;
       
+      #randomizer{
+        background-color: transparent;
+        border: none;
+        
+        #shuffle{
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          height: 75%;
+          width: 75%;
+        }
+        #shuffle:hover{
+            background-color: dodgerblue;
+          }
+      }
+
       
       button{
-        border-radius: 25px;
-        padding: 3%;
-        background-color: rgb(50, 85, 107, 30%);
+        border-radius: 50%;
+        background-color: rgb(33, 39, 47, 100%);
+        height: 100%;
+        min-width: 60px;
       }
       button:hover{
-        background-color:dodgerblue;
+        filter: drop-shadow(1px 0px 10px rgb(123, 123, 123));
       }
     }
     .overlayNavigation img {
@@ -228,23 +244,30 @@ dialog::backdrop {
     width: clamp(80px, 40dvw, 150px);
   }
 
-  dialog{
+footer{
+  #footerLogo{
+    margin-top: 20px;
+    background-color: transparent;
+  }
+}
 
+  dialog{
+    width: 90%;
+    main{
+      #currentPicture{
+        aspect-ratio: 1 / 2;
+        max-height: 375px;
+        width: 98%;
+        border-radius: 0px;
+      }
+    }
+    footer{
+      .overlayNavigation{
+        gap: 15%;
+      }
+    }
   }
 
 
 }
 
-/* @media (min-width: 320px) and (max-width: 1000px) {
-  dialog{
-    main {
-
-        #currentPicture{
-          aspect-ratio: 1 / 2;
-          max-width: 320px;
-          border: 1px solid transparent;
-          border-radius: 20px;
-        }
-    } 
-  }
-} */

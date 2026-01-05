@@ -6,6 +6,7 @@
     <title>Fotogram</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./img/Logo.png" type="image/x-icon">
+    <script src="script.js"></script>
 </head>
 <body onload="">
     <header>
@@ -37,7 +38,7 @@
     <dialog id="overlay">
         <header>
             <button id="closeOverlay" onclick="closeOverlay()">X</button>
-            <p id="imgTitle" onclick="showDescription()"></p>
+            <p id="imgTitle"></p>
             
         </header>
         <main>
@@ -47,20 +48,18 @@
             <p id="counter" onclick="countCurrentPicture()"></p>
             
             <div class="overlayNavigation">
-                <button onclick="switchSelectedPhotoLeft()"><img id="arrowLeft" src="./img/arrow left.png" alt="arrow left"></button>
-                <img id="favIcon" src="./img/favorite.png" alt="favorite">
-                <button onclick="switchSelectedPhotoRight()"><img src="./img/arrow right.png" alt="arrow right"></button>
+                <button class="arrow" onclick="switchSelectedPhotoLeft()"><img id="arrowLeft" src="./img/arrow left.png" alt="arrow left"></button>
+                <button id="randomizer" onclick="randomizePhotos()"><img id="shuffle" src="./img/shuffle-svgrepo-com.svg" alt=""></button>
+                <button class="arrow" onclick="switchSelectedPhotoRight()"><img src="./img/arrow right.png" alt="arrow right"></button>
             </div>
         </footer>
     </dialog>
 
 
     <footer>
-        <img src="./img/DA-Logo.png" alt="Dev-Akademie">
+        <img id="footerLogo" src="./img/DA-Logo.png" alt="Dev-Akademie">
         <span>(C) 2023 Developer Akademie GmbH</span>
     </footer>
 
-
-<script src="script.js"></script>
 </body>
 </html>
