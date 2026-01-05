@@ -118,7 +118,6 @@ footer {
 dialog {
   border: none;
   border-radius: 50px;
-  border: 2px solid white ;
   padding: 20px;
   background-color: rgb(9, 33, 42);
   left: 50%;
