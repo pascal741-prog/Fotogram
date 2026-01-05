@@ -11,6 +11,9 @@
   color: white;
   font-family: "Figtree", sans-serif;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 
 @font-face {
   font-family: "Figtree";
