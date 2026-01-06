@@ -119,6 +119,7 @@ footer {
 /* ! DIALOG */
 
 dialog {
+  position: fixed;
   border: none;
   border-radius: 50px;
   padding: 20px;
