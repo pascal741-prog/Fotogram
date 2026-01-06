@@ -22,7 +22,6 @@ let currentIndex = 0;
 // #endregion global variablen
 
 // #region overlay 
-
 // #region open dialog
 function openOverlay(index) {
   const OverlayRef = document.getElementById("overlay");
@@ -53,13 +52,12 @@ function OpenCurrentPicture() {
   openPicture.alt = document.querySelectorAll("#content img")[currentIndex].alt;
 }
 // #endregion open selected Photo
-// #region picture counter
-
+// #region picture count output
 function countCurrentPicture() {
   const counter = document.getElementById("counter");
   counter.textContent = `${currentIndex + 1} / ${imgFiles.length}`;
 }
-// #endregion picture counter 
+// #endregion picture count output
 // #region switch picture left
 function switchSelectedPhotoLeft() {
   if (currentIndex > 0) {
@@ -109,5 +107,4 @@ function randomizePhotos() {
   showDescription();
 }
 // #endregion randomizer
-
 // #endregion Overlay
