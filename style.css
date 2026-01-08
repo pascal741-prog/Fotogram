@@ -263,9 +263,7 @@ dialog::backdrop {
     width: 90%;
     main {
       #currentPicture {
-        aspect-ratio: 1 / 2;
-        max-height: 375px;
-        width: 98%;
+        width: 100%;
         border-radius: 0px;
       }
     }

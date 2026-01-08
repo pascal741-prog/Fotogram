@@ -1,4 +1,4 @@
-// #region global variablen 
+// #region global variablen
 
 const OverlayRef = document.getElementById("overlay");
 
@@ -20,9 +20,8 @@ const imgFiles = [
 let currentIndex = 0;
 
 // #endregion global variablen
-
-// #region overlay 
-  // #region open dialog
+// #region overlay
+// #region open dialog
 function openOverlay(index) {
   const OverlayRef = document.getElementById("overlay");
 
@@ -34,43 +33,43 @@ function openOverlay(index) {
   OverlayRef.showModal();
 }
 // #endregion open dialog
-  // #region close-Dialog
+// #region close-Dialog
+
 function closeOverlay() {
   const OverlayRef = document.getElementById("overlay");
 
   OverlayRef.close();
 }
-
-function counter() {
-}
 // #endregion close-Dialog
-  // #region open selected Photo
+// #region counter
+function counter() {}
+// #endregion counter
+// #region open selected Photo
 function OpenCurrentPicture() {
   const openPicture = document.getElementById("currentPicture");
   openPicture.src = imgFiles[currentIndex];
   openPicture.alt = document.querySelectorAll("#content img")[currentIndex].alt;
 }
 // #endregion open selected Photo
-  // #region picture count output
+// #region picture count output
 function countCurrentPicture() {
   const counter = document.getElementById("counter");
   counter.textContent = `${currentIndex + 1} / ${imgFiles.length}`;
 }
 // #endregion picture count output
-  // #region switch picture left
+// #region switch picture left
 function switchSelectedPhotoLeft() {
   if (currentIndex > 0) {
     currentIndex--;
-  }
-  else{
-    currentIndex = imgFiles.length -1;
+  } else {
+    currentIndex = imgFiles.length - 1;
   }
   OpenCurrentPicture();
   countCurrentPicture();
   showDescription();
 }
-//#endregion switch picture left 
-  // #region switch picture right 
+//#endregion switch picture left
+// #region switch picture right
 function switchSelectedPhotoRight() {
   if (currentIndex < imgFiles.length - 1) {
     currentIndex++;
@@ -82,7 +81,7 @@ function switchSelectedPhotoRight() {
   showDescription();
 }
 // #endregion switch picture right
-  // #region show img description
+// #region show img description
 const thumbnails = document.querySelectorAll("#content img");
 
 function showDescription() {
@@ -91,7 +90,7 @@ function showDescription() {
   titleRef.textContent = openPicture.alt;
 }
 // #endregion show img description
-  // #region randomizer
+// #region randomizer
 function randomizePhotos() {
   let randomIndex;
 
