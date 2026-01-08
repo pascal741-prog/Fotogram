@@ -27,11 +27,11 @@ function openOverlay(index) {
   const OverlayRef = document.getElementById("overlay");
 
   currentIndex = index;
-  OverlayRef.showModal();
   counter();
   OpenCurrentPicture();
   countCurrentPicture();
   showDescription();
+  OverlayRef.showModal();
 }
 // #endregion open dialog
   // #region close-Dialog
@@ -42,7 +42,6 @@ function closeOverlay() {
 }
 
 function counter() {
-  console.log(currentIndex);
 }
 // #endregion close-Dialog
   // #region open selected Photo
