@@ -26,6 +26,7 @@ function openOverlay(index) {
   const OverlayRef = document.getElementById("overlay");
 
   currentIndex = index;
+
   counter();
   OpenCurrentPicture();
   countCurrentPicture();
@@ -47,9 +48,18 @@ function counter() {}
 // #region open selected Photo
 function OpenCurrentPicture() {
   const openPicture = document.getElementById("currentPicture");
+
+  openPicture.style.visibility = "hidden";
+
+  openPicture.onload = () => {
+    openPicture.style.visibility = "visible";
+  };
+
   openPicture.src = imgFiles[currentIndex];
-  openPicture.alt = document.querySelectorAll("#content img")[currentIndex].alt;
+  openPicture.alt =
+    document.querySelectorAll("#content img")[currentIndex].alt;
 }
+
 // #endregion open selected Photo
 // #region picture count output
 function countCurrentPicture() {
