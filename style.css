@@ -127,6 +127,7 @@ dialog {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  min-width: 75vw;
 
   header {
     display: flex;
@@ -155,16 +156,15 @@ dialog {
   }
 
   main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1;
     background-color: transparent;
+    width: 100%;
+    height: auto;
 
     #currentPicture {
-      aspect-ratio: 1.5 / 1;
-      width: clamp(280px, 35dvw, 1920px); /*1920 x 1080*/
       border: 1px solid transparent;
       border-radius: 20px;
+      max-height: 50vh;
     }
   }
 
